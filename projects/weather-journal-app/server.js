@@ -12,10 +12,17 @@ app.use(bodyParser.json());
 
 // Cors for cross origin allowance
 
+
 // Initialize the main project folder
 app.use(express.static('website'));
 
 
-// Setup Server
+// Setup Server - to access the app http:localhost:/8000
+const port = 8000;
+const server = app.listen(port, listening);
+function listening() {
+    console.log("The server is running");
+    console.log("running on localhost: ${ port }`");
+}
 
 // my first comment
