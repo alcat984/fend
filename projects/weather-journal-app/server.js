@@ -6,6 +6,8 @@ const express = require('express');
 
 // Start up an instance of app
 const app = express();
+
+//Dependencies
 const bodyParser = require('body-parser');
 
 /* Middleware*/
@@ -24,7 +26,8 @@ const port = 3000;
 
 // Setup Server
 const Server = app.listen(port, () => {
-    console.log("Running on localhost: ${port}");
+    console.log("Server running"); 
+    console.log(`Running on localhost: ${port}`);
 });
 app.get('/projectData' , function(req, res){
     res.send(projectData);
